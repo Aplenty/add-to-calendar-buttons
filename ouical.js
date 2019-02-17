@@ -98,7 +98,12 @@
             },
 
             ical: function(event) {
-                return this.ics(event, 'icon-ical', 'iCal');
+                var a = this.ics(event, 'icon-ical', 'iCal');
+                var el = document.getElementById('calendarIcal');
+                if (el) {
+                    el.href= links.ics;
+                }
+                return a
             },
 
             outlook: function(event) {
